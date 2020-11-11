@@ -1,0 +1,261 @@
+/********Basics********/
+
+body {
+    background-image: linear-gradient(rgba(62, 20, 20, 0.4), rgba(62, 20, 20, 0.4)),
+        url(tausta.jpg);
+    background-size: cover;
+    background-position: center;
+    font-family: Lato;
+    font-weight: 300;
+    position: relative;
+    height: 100vh;
+    color: #555;
+}
+
+#mainbox {
+    width: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.box-0,
+.box-1 {
+    width: 50%;
+    float: left;
+    height: 500px;
+    padding: 100px;
+}
+
+.active {
+    background-color: #f7f7f7;
+}
+
+
+/*******Players***********/
+
+.player-0,
+.player-1 {
+    font-size: 40px;
+    color: darkgray;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 100;
+    margin-top: 30px;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.on {
+    color: #EB4D4D;
+
+}
+
+.winner {
+    color: #EB4D4D;
+
+}
+
+.on:after,
+.on:before {
+    content: "•";
+    color: #b83b3b;
+    text-shadow: #b83b3b 0 0 5px;
+    margin: 0 10px;
+}
+
+
+
+
+.score {
+    text-align: center;
+    font-size: 80px;
+    font-weight: 100;
+    color: #EB4D4D;
+    margin-bottom: 130px;
+
+}
+
+/*******Points box*********/
+
+.currentbox {
+    background-color: #EB4D4D;
+    width: 40%;
+    margin: 0 auto;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+
+}
+
+.current-text {
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-size: 12px;
+    color: #222;
+}
+
+.current {
+    font-size: 30px;
+    color: white;
+}
+
+/********Game buttons********/
+
+button {
+    position: absolute;
+    width: 200px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #555;
+    background: none;
+    border: none;
+    font-family: Lato;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: 300;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    font-weight: 600;
+}
+
+button:hover i {
+    margin-right: 20px;
+}
+
+button:focus {
+    outline: none;
+}
+
+i {
+    color: #EB4D4D;
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 32px;
+    line-height: 1;
+    vertical-align: text-top;
+    margin-top: -4px;
+    transition: margin 0.3s;
+}
+
+
+.btn-new {
+    top: 80px;
+}
+
+.btn-throw {
+    top: 403px;
+}
+
+.btn-take {
+    top: 467px;
+}
+
+.btn-manual {
+    top: 590px;
+}
+
+.sika {
+    position: absolute;
+    left: 50%;
+    top: 198px;
+    transform: translateX(-50%);
+    height: 130px;
+    box-shadow: 0px 10px 60px rgba(0, 0, 0, 0.10);
+}
+
+/*****Peliohje popup************/
+
+.popup {
+    position: absolute;
+    width: 100px;
+    left: 46%;
+    top: 590px;
+    background: none;
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/********* The actual popup ************/
+.popup .popuptext {
+    visibility: hidden;
+    width: 600px;
+    background-color: #555;
+    color: #fff;
+    text-align: left;
+    line-height: 1.6;
+    border-radius: 6px;
+    padding: 8px 0;
+    padding-right: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -100%;
+    margin-left: -165px;
+}
+
+/******** Popup arrow *****************/
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/******* Hide and show the popup ***********/
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/******** Fade animation to popup***********/
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*************name of the card and points**************/
+
+.points {
+    position: absolute;
+    width: 200px;
+    left: 46%;
+    top: 335px;
+    font-weight: bold;
+}

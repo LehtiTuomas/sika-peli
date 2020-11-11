@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Heitä sikaa peli</title>
+    <meta name="Heitä sikaa peli" content="Heitä sikaa pelin viihdyttävä nettiversio.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="mainbox">
+        <div class="box-0 active">
+            <div class="player-0 on">PELAAJA 1</div>
+            <div class="score" id="score-0">34</div>
+            <div class="currentbox" id="currentbox-0">
+                <div class="current-text" id="current-text-0">Heittovuoron pisteet:</div>
+                <div class="current" id="current-0">8</div>
+            </div>
+        </div>
+
+        <div class="box-1">
+            <div class="player-1">PELAAJA 2</div>
+            <div class="score" id="score-1">43</div>
+            <div class="currentbox" id="currentbox-1">
+                <div class="current-text" id="current-text-1">Heittovuoron pisteet:</div>
+                <div class="current" id="current-1">18</div>
+            </div>
+
+        </div>
+
+
+        <button class="btn-new" id="btn-uusi"><i class="ion-ios-plus-outline"></i>Uusi peli</button>
+
+        <img src="sika-1.bmp" alt="sika" class="sika">
+
+
+        <div class="points" id="sika-points">15 pistettä</div>
+
+        <button class="btn-throw" id="btn-heitto"><i class="ion-ios-loop"></i>Heitä sikaa</button>
+        <button class="btn-take" id="btn-ota"><i class="ion-ios-download-outline"></i>Ota pisteet</button>
+
+        <div class="popup" id="btn-manual" onclick="manual()">Pelin säännöt
+            <span class="popuptext" id="myPopup">
+                <ul>
+                    <li>Pelin voittamiseksi pelaajan pitää saada vähintään 100 pistettä.</li>
+                    <li>Pelaajat heittävät vuorollaan sikoja.</li>
+                    <li>Yksi vuoro koostuu yhdestä tai useammasta heitosta.</li>
+                    <li>Pisteiden määrä määräytyy siitä mihin asentoon siat heitettäessä jäävät.</li>
+                    <li>Jos siat jäävät asentoon 'läskikortti', pelaaja ei saa enää jatkaa vuoroaan ja menettää
+                        vuorollaan saamansa pisteet.</li>
+                    <li>Jos tulee asento 'pelkkää pekonia', pelaaja menettää kaikki pisteensä.</li>
+                    <li>Kun pelaaja haluaa lopettaa vuoronsa, vuorolla saadut pisteet lisätäänpelaajan aiemmin saamiin
+                        pisteisiin ja vuoro siirtyy seuraavalle.</li>
+
+                </ul>
+            </span>
+        </div>
+
+
+    </div>
+
+    <script src="script.js" async defer></script>
+</body>
+
+</html>
